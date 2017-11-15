@@ -54,11 +54,10 @@ maven_jar(
     sha1 = "6c6c702c89bfff3cd9e80b04d668c5e190d588c6"
 )
 
-http_archive(
+git_repository(
     name = "com_google_protobuf",
-    urls = ["https://github.com/google/protobuf/archive/b04e5cba356212e4e8c66c61bbe0c3a20537c5b9.zip"],
-    strip_prefix = "protobuf-b04e5cba356212e4e8c66c61bbe0c3a20537c5b9",
-    sha256 = "cf4a434ac3a83040e9f65be92e153d00d075d8cd25e3f6c6d8670879f5796aa0",
+    remote = "git://github.com/google/protobuf",
+    commit = "91ff83c024be36e2f2728c30cd7eedcec9220d1a",
 )
 
 http_archive(

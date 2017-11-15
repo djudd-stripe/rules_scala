@@ -47,3 +47,15 @@ scalapb_proto_library(
     deps = [":test_service"],
     visibility = ["//visibility:public"],
 )
+
+proto_library(
+    name = "test_external_dep_proto",
+    srcs = ["test_external_dep.proto"],
+    deps = ["@com_google_protobuf//:descriptor_proto"],
+)
+
+scalapb_proto_library(
+    name = "test_external_dep",
+    deps = [":test_external_dep_proto"],
+    visibility = ["//visibility:public"],
+)

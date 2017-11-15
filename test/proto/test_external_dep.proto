@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "google/protobuf/descriptor.proto";
+option java_package = "test.proto";
+
+extend google.protobuf.MessageOptions {
+  optional string annotation = 50001;
+}

@@ -66,3 +66,14 @@ http_archive(
     strip_prefix = "protobuf-b04e5cba356212e4e8c66c61bbe0c3a20537c5b9",
     sha256 = "cf4a434ac3a83040e9f65be92e153d00d075d8cd25e3f6c6d8670879f5796aa0",
 )
+
+#git_repository(
+#    name = "com_stripe_proto_dep_test",
+#    remote = "https://github.com/djudd-stripe/proto-dep-test.git",
+#    commit = "15566613b10e1a88b6f16f61b54f8dc9e72ab0d2"
+#)
+
+local_repository(
+    name = "com_stripe_proto_dep_test",
+    path = "../proto-dep-test",
+)

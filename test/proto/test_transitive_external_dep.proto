@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "proto-dep-test/test.proto";
+option java_package = "test.proto";
+
+message Foo {
+  required Annotation a = 1;
+}

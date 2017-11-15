@@ -59,3 +59,15 @@ scalapb_proto_library(
     deps = [":test_external_dep_proto"],
     visibility = ["//visibility:public"],
 )
+
+proto_library(
+    name = "test_transitive_external_dep_proto",
+    srcs = ["test_transitive_external_dep.proto"],
+    deps = ["@com_stripe_proto_dep_test//:test_proto"],
+)
+
+scalapb_proto_library(
+    name = "test_transitive_external_dep",
+    deps = [":test_transitive_external_dep_proto"],
+    visibility = ["//visibility:public"],
+)
